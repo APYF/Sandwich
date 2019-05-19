@@ -25,7 +25,7 @@ public class JsonUtils {
             JSONArray alternativeNamesJsonArray = sandwichJSon.getJSONObject("name").getJSONArray("alsoKnownAs");
 
             List<String> listAlternativeNames = new ArrayList<>();
-            for(int i =0; i < alternativeNamesJsonArray.length(); i++) {
+            for (int i = 0; i < alternativeNamesJsonArray.length(); i++) {
                 listAlternativeNames.add(alternativeNamesJsonArray.getString(i));
             }
             sandwich.setAlsoKnownAs(listAlternativeNames);
@@ -38,7 +38,7 @@ public class JsonUtils {
 
             JSONArray ingredientsJsonArray = sandwichJSon.getJSONArray("ingredients");
             List<String> listIngredients = new ArrayList<>();
-            for(int j = 0; j < ingredientsJsonArray.length(); j++) {
+            for (int j = 0; j < ingredientsJsonArray.length(); j++) {
                 listIngredients.add(ingredientsJsonArray.getString(j));
             }
             sandwich.setIngredients(listIngredients);
